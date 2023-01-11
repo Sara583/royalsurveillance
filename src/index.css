@@ -1,13 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
+* {
+  margin: 0px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(
+    to left,
+    #141e30,
+    #182539,
+    #1c2c42,
+    #20334b,
+    #243b55
+  );
+  
+   */
+  background-image: linear-gradient(
+    to left,
+    #0f0f0f,
+    #19101b,
+    #270f1e,
+    #370818,
+    #420505
+  );
+  background-repeat: no-repeat;
+}
+
+.custom-shape-divider-top-1670729557 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1670729557 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 500px;
+}
+
+.custom-shape-divider-top-1670729557 .shape-fill {
+  fill: #2b2d427e;
+}
+.custom-shape-divider-bottom-1670726672 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1670726672 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.custom-shape-divider-bottom-1670726672 .shape-fill {
+  fill: #222222;
+}
+.singleProduct {
+  font-size: 2rem;
+  color: aliceblue;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.react-icons {
+  vertical-align: middle;
+}
+li > ul {
+  transform: translatex(100%) scale(0);
+}
+li:hover > ul {
+  transform: translatex(101%) scale(1);
+}
+li > button svg {
+  transform: rotate(-90deg);
+}
+li:hover > button svg {
+  transform: rotate(-270deg);
+}
+/* #coverdiv {
+  background-image: url("technology-background2.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+/* Slider CSS*/
+.slider {
+  height: 80pt;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  user-select: none;
+  touch-action: none;
+}
+
+.slider:before {
+  left: 0;
+  top: 0;
+}
+.slider:after,
+.slider:before {
+  content: "";
+  height: 75pt;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider:after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider:after,
+.slider:before {
+  content: "";
+  height: 75pt;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider .slide-track-1 {
+  animation: scroll-l 30s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+.slider .slide-track-2 {
+  animation: scroll-r 30s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+
+.slider .slide {
+  height: 75pt;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.slider .slide img {
+  width: 180px;
+  padding: 1pc;
+  vertical-align: middle;
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes scroll-l {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes scroll-r {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
